@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    {% for menu_link in menu_links %}
+      <li>
+        {% if menu_link.url starts with '/node' %}
+          {% set nid = menu_link.url|split('/').2 %}
+          {% set destination = path('entity.node.canonical', {'node': nid }) %}
+        {% else %}
+          {% set destination = menu_link.url %}
+        {% endif %}
+        <a href="{{ destination }}">{{ menu_link.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

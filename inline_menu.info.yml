@@ -1,0 +1,7 @@
+name: Inline Menu
+description: 'Adds attributes to link fields for nesting to create inline menus.'
+type: module
+package: Menu
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal/linkit

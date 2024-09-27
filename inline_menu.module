@@ -1,0 +1,13 @@
+<?php
+
+
+function inline_menu_theme($existing, $type, $theme, $path) {
+  return [
+    'inline_menu' => [
+      'variables' => [
+        'menu_links' => [],
+      ],
+    ]
+  ];
+}
+
