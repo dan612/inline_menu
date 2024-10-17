@@ -1,0 +1,10 @@
+{% for key, item in options %}
+  <div class="a11y-checkboxes">
+    <span class="a11y-checkbox-item">
+      <input type="checkbox" name="{{ item.__toString() }}" value="{{ key }}" {{ item.checked ? 'checked' : '' }} />
+      <label for="{{ key }}">
+        {{ item }}
+      </label>
+    </span>
+  </div>
+{% endfor %}

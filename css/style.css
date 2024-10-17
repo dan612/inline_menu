@@ -1,0 +1,44 @@
+/* #field-inline-menu-values .draggable td:nth-child(2) { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   align-items: baseline; */
+/* } */
+
+/* #field-inline-menu-values .form-type--textfield, .form-type--linkit, .form-type--select { */
+/*   display: flex; */
+/*   flex: 1 0 45%; */
+/*   flex-wrap: wrap; */
+/*   justify-content: flex-start; */
+/*   margin-bottom: 0; */
+/* } */
+
+/* #field-inline-menu-values .form-type--select { */
+/*   flex: 1 0 10%; */
+/* } */
+
+#field-inline-menu-values .form-type--select select {
+  /* max-width: 100px; */
+  /* min-width: 100px; */
+}
+
+#field-inline-menu-values tbody.collapsed {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+#field-inline-menu-values thead .field-label.collapse:after {
+  content: "+";
+}
+
+#field-inline-menu-values thead .field-label:hover {
+  cursor: pointer;
+}
+
+#field-inline-menu-values thead .field-label::after {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  content: "-";
+  color: var(--drupal--brand-blue);
+}

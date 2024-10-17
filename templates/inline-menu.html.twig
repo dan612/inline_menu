@@ -2,13 +2,25 @@
   <ul>
     {% for menu_link in menu_links %}
       <li>
-        {% if menu_link.url starts with '/node' %}
-          {% set nid = menu_link.url|split('/').2 %}
-          {% set destination = path('entity.node.canonical', {'node': nid }) %}
-        {% else %}
-          {% set destination = menu_link.url %}
+        <a href="{{ menu_link.url }}">{{ menu_link.title }}</a>
+        {% if menu_link.has_children %}
+          <ul>
+            {% for child in menu_link.children %}
+              <li>
+                <a href="{{ child.url }}">{{ child.title }}</a>
+                {% if child.has_children %}
+                  <ul>
+                    {% for grandchild in child.children %}
+                      <li>
+                        <a href="{{ grandchild.url }}">{{ grandchild.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
         {% endif %}
-        <a href="{{ destination }}">{{ menu_link.title }}</a>
       </li>
     {% endfor %}
   </ul>

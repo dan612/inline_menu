@@ -1,0 +1,16 @@
+inline_menu:
+  version: 1.x
+  js:
+    js/inlineMenu.js: { }
+  css:
+    theme:
+      css/style.css: { }
+  dependencies:
+    - core/once
+    - core/drupal
+
+custom_checkboxes:
+  css:
+    theme:
+      css/checkboxes.css: { }
+
